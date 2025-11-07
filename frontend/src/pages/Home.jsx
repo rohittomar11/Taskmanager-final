@@ -1,25 +1,4 @@
-// import { Link } from 'react-router-dom';
 
-// const Home = () => {
-//   return (
-    
-      
-//         Task Manager
-//         Organize your tasks efficiently
-        
-          
-//             Get Started
-          
-          
-//             Login
-          
-        
-      
-    
-//   );
-// };
-
-// export default Home;
 import { Link } from "react-router-dom";
 
 const Home = () => {

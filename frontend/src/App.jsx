@@ -1,33 +1,4 @@
-// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import { AuthProvider } from './context/AuthContext';
-// import Navbar from './components/Navbar';
-// import PrivateRoute from './components/PrivateRoute';
-// import Home from './pages/Home';
-// import Login from './pages/Login';
-// import Register from './pages/Register';
-// import Dashboard from './pages/Dashboard';
 
-// function App() {
-//   return (
-    
-      
-        
-        
-//           } />
-//           } />
-//           } />
-          
-                
-              
-//             }
-//           />
-        
-      
-    
-//   );
-// }
-
-// export default App;
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import Navbar from "./components/Navbar";
