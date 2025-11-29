@@ -7,7 +7,7 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-
+ const API=import.meta.env.VITE_BACKEND_URL;
   useEffect(() => {
     const userInfo = localStorage.getItem("userInfo");
     if (userInfo) setUser(JSON.parse(userInfo));
@@ -15,14 +15,14 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = async (email, password) => {
-    const { data } = await axios.post("/api/auth/login", { email, password });
+    const { data } = await axios.post(`${API}/api/auth/login`, { email, password });
     localStorage.setItem("userInfo", JSON.stringify(data));
     setUser(data);
     return data;
   };
 
   const register = async (name, email, password) => {
-    const { data } = await axios.post("/api/auth/register", { name, email, password });
+    const { data } = await axios.post(`${API}/api/auth/register`, { name, email, password });
     localStorage.setItem("userInfo", JSON.stringify(data));
     setUser(data);
     return data;
